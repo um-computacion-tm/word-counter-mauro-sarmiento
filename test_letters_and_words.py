@@ -201,7 +201,7 @@ class TestCountWords(unittest.TestCase):
     def testCountWords_II(self):
         countWrd = Count()
         result = countWrd.count_words('Chippin in')
-        self.assertEqual(result, {'Chippin': 1, 'in': 1})
+        self.assertEqual(result, {'chippin': 1, 'in': 1})
 
     def testCountWords_III(self):
         countWrd = Count()
@@ -211,30 +211,30 @@ class TestCountWords(unittest.TestCase):
     def testCountWords_IV(self):
         countWrd = Count()
         result = countWrd.count_words('Vanpiro esiten')
-        self.assertEqual(result, {'Vanpiro': 1, 'esiten': 1})
+        self.assertEqual(result, {'vanpiro': 1, 'esiten': 1})
 
     def testCountWords_V(self):
         countWrd = Count()
         result = countWrd.count_words('I really want to stay at your house')
-        self.assertEqual(result, {'I': 1, 'really': 1, 'want': 1, 'to': 1, 'stay': 1, 'at': 1, 'your': 1, 'house': 1})
+        self.assertEqual(result, {'i': 1, 'really': 1, 'want': 1, 'to': 1, 'stay': 1, 'at': 1, 'your': 1, 'house': 1})
 
     def testCountWords_VI(self):
         countWrd = Count()
         result = countWrd.count_words('El dinero es dinero, el dinero es dinero, aprende algo dinero')
-        self.assertEqual(result, {'El': 1, 'dinero': 3, 'es': 2, 'el': 1, 'dinero,': 2, 'aprende': 1, 'algo': 1 })
+        self.assertEqual(result, {'el': 2, 'dinero': 3, 'es': 2, 'dinero,': 2, 'aprende': 1, 'algo': 1 })
 
     def testCountWords_VII(self):
         countWrd = Count()
         result = countWrd.count_words('Las cátedras virtuales están caídas justo ahora (True)')
         self.assertEqual(result, {
-            'Las': 1, 'cátedras': 1, 'virtuales': 1, 'están': 1, 'caídas': 1, 'justo': 1, 'ahora': 1, '(True)': 1
+            'las': 1, 'cátedras': 1, 'virtuales': 1, 'están': 1, 'caídas': 1, 'justo': 1, 'ahora': 1, '(true)': 1
             })
     
     def testCountWords_VIII(self):
         countWrd = Count()
         result = countWrd.count_words('SiNoHayEspaciosTomaAbsolutamenteTodoJunto')
         self.assertEqual(result, {
-            'SiNoHayEspaciosTomaAbsolutamenteTodoJunto':1
+            'sinohayespaciostomaabsolutamentetodojunto':1
             })
 
 if __name__ == '__main__':
